@@ -50,6 +50,16 @@ def single_light_ray_trajectories(local_theta):
             # checking if the ray can scape from black hole
             if (-delta_radius / diffPhi) <= pow(10, -3):
                 print("It's not gonna hit the horizon")
+
+                # The other half of the path is symmetric
+                phi_list_length = len(phi_list)
+                radius_list_length = len(radius_list)
+                for local_counter in range(radius_list_length):
+                    phi_list.append(phi_list[len(phi_list) - 1] + diffPhi)
+                    radius_list.append(
+                        radius_list[radius_list_length - 1 - local_counter]
+                    )
+
                 flag = False
 
             else:
@@ -83,4 +93,4 @@ def single_light_ray_trajectories(local_theta):
 
 
 # main function and calling subfunctions
-single_light_ray_trajectories()  # Must enter the initial thetas
+single_light_ray_trajectories()  # Must enter the initial theta
