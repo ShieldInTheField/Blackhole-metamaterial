@@ -1,2 +1,2 @@
 # Black hole metamaterial
-Metamaterial analog of a Schwarzschild black hole shadow
+Metamaterial analog of a Schwarzschild blackhole shadow
